@@ -1,0 +1,63 @@
+@import "../../common/common.wxss";
+page{
+  background-color: #F8F8F8;
+}
+.xym-user-img{
+  width:128rpx;
+  height:128rpx;
+  margin:20rpx;
+  border-radius:50%;
+}
+.xym-user-wrap{
+  padding: 10rpx;
+}
+.xym-user-name{
+  font-size:16px;
+  height:30px;
+  line-height:30px;
+}
+.xym-user-periodCycle{
+  font-size:14px;
+  height:30px;
+  line-height:30px;
+}
+.xym-setting-btn{
+  float:right;
+  height:30px;
+  width:50px;
+  line-height:30px;
+  font-size:12px;
+  padding:0;
+  margin:20px 10px 0 0;
+  color:#ffa4c4;
+  border:1px solid #ffa4c4;
+  background-color:#fff;
+}
+.xym-history-wrap{
+  background:#fff;
+  padding: 0 15px;
+  font-size:14px;
+}
+.xym-history-item{
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #f8f8f8;
+}
+.xym-right-icon{
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  margin-top: 13px;
+}
+.xym-add-record{
+  height:35px;
+  width:50%;
+  line-height:35px;
+  font-size:12px;
+  padding:0;
+  margin: 10px auto;
+  color:#ffa4c4;
+  border:1px solid #ffa4c4;
+  background-color:#fff;
+  border-radius: 40px;
+}

@@ -1,0 +1,29 @@
+.container{
+  padding-top: 50px;
+}
+.xym-date-picker{
+  width:80%;
+  display:block;
+  height:40px;
+  margin:20px auto;
+  font-size:16px;
+  line-height:40px;
+  border:1px solid #ddd;
+  padding:0 10px;
+  border-radius:40px;
+}
+.xym-margin-top-100{
+  margin-top: 100px;
+}
+.xym-add-history-btn{
+  width:80%;
+  display:block;
+  height:40px;
+  margin:20px auto;
+  font-size:16px;
+  line-height:40px;
+  padding:0 10px;
+  border-radius:40px;
+  color: #fff;
+  background-color: #ffa4c4;
+}

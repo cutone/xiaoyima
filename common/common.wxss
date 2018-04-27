@@ -1,0 +1,13 @@
+.xym-block{
+  display: block;
+}
+.xym-inline-block{
+  display: inline-block;
+  vertical-align: middle;
+}
+.xym-background-fff{
+  background-color: #fff;
+}
+.xym-right{
+  float: right;
+}

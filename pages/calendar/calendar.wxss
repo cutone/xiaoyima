@@ -1,0 +1,43 @@
+@import "../../template/monthly.wxss"
+
+.xym-color-msg{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+.xym-alert-wrap{
+  display: inline-block;
+  margin: 0 4%;
+}
+.xym-background-pink{
+  background-color: #ffa4c4;
+}
+.xym-pink{
+  color: #ffa4c4;
+}
+.xym-background-light-pink{
+  background-color: #ff999a9e;
+}
+.xym-light-pink{
+  color: #ff999a9e;
+}
+.xym-background-purple{
+  background-color: #d9b8f1;
+}
+.xym-purple{
+  color: #d9b8f1;
+}
+.xym-background-green{
+  background-color: #b8f1cc;
+}
+.xym-green{
+  color: #b8f1cc;
+}
+
+.xym-alert-text{
+  vertical-align: middle;
+  font-size: 12px;
+}

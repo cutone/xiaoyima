@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view wx:if="{{status == 0}}">
+    <text class="xym-alert-text">预计下次开始日期</text>
+    <view class="xym-alert-text" wx:if="{{status == 0}}">还剩<text class="xym-days">{{last_days}}</text>天</view>
+    <image src="../../images/123.jpeg"></image>
+    <picker mode="date" bindchange="bindComingDateChange" end="{{nowDate}}">
+      <view class="picker xym-period-btn">
+        大姨妈来了
+      </view>
+    </picker>
+  </view>
+  
+  <view wx:if="{{status == 1}}">
+    <text class="xym-alert-text">大姨妈来了</text>
+    <view class="xym-alert-text">第<text class="xym-days">{{start_days}}</text>天</view>
+    <image src="../../images/123.jpeg"></image>
+    <picker mode="date" bindchange="bindLeavingingDateChange" end="{{nowDate}}">
+      <view class="picker xym-period-btn">
+        大姨妈走了
+      </view>
+    </picker>
+  </view>
+</view> 

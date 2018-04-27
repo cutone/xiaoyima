@@ -1,0 +1,42 @@
+<!--logs.wxml-->
+<!-- <import src="../../template/monthly.wxml"/>
+<template is="monthly" data="{{...data}}">
+
+</template> -->
+<view class="container">
+    <view class="top_bar">
+        <button class="prev" bindtap="prev">上月</button>
+        <text>{{tomonth}}</text>
+        <button class="next" bindtap="next">下月</button>
+    </view>
+    <view class="calendar">
+        <view class="calendar_head">
+            <view wx:for="{{['日','一','二','三','四','五','六']}}" wx:for-item="day"  class="td" wx:key="item.id">{{day}}</view>
+        </view>
+        <view class="calendar_body">
+            <view class="td {{day.love?'love':''}} {{periodStart==day.ymd?'love':''}} {{day.monthly?'monthly':''}} {{day.danger?'danger':''}} {{day.safe? selected_action : ''}} {{day.safe? 'selected_day' : ''}}" wx:for="{{list}}"  wx:key="item.id" wx:for-key="id" wx:for-item="day" data-ymd="{{day.ymd}}" bindtap="selected_day">
+                <view wx:if="{{day.ymd == nowDate}}" class="day">今天</view>
+                <view wx:else class="day">{{day.date}}</view>
+            </view>
+        </view>
+    </view>
+    <view>
+      <view class="xym-alert-wrap xym-pink">
+        <text class="xym-color-msg xym-background-pink"></text>
+         <text class="xym-alert-text">经期</text> 
+      </view>
+      <view class="xym-alert-wrap xym-light-pink">
+        <text class="xym-color-msg xym-background-light-pink"></text>
+        <text class="xym-alert-text">预测经期时间</text>
+      </view>
+      <view class="xym-alert-wrap xym-purple">
+        <text class="xym-color-msg xym-background-purple"></text>
+        <text class="xym-alert-text">排卵期</text>
+      </view>
+      <view class="xym-alert-wrap xym-green">
+        <text class="xym-color-msg xym-background-green"></text>
+        <text class="xym-alert-text">安全期</text>
+      </view>
+    </view>
+</view>
+ 

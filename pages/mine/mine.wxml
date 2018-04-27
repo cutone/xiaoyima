@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="xym-user-wrap xym-background-fff">
+    <image class="xym-user-img xym-inline-block" src="{{userInfo.avatarUrl}}"></image>
+    <view class="xym-inline-block">
+      <text class="xym-block xym-user-name">{{userInfo.nickName}}</text>
+      <text class="xym-block xym-user-periodCycle">平均生理周期：{{periodCycle}}天</text>
+    </view>
+    <picker class="xym-inline-block xym-right" bindchange="bindPeriodCycleChange" range="{{periodCycleList}}" value="{{periodCycle-1}}">
+      <view class="picker xym-period-btn">
+        <button class="xym-setting-btn">设置</button>
+      </view>
+    </picker>
+    
+  </view>
+  <view><button class="xym-add-record" bindtap="toAddHisttory">增加历史记录</button></view>
+  <view class="xym-history-wrap">
+    <view class="xym-history-item" wx:for="{{history}}" wx:for-item="item" data-id="{{item._id}}" bindtap="toAddHisttory">
+      <text>{{item.start}}至{{item.end}}</text>
+      <image class="xym-right-icon xym-right" src="../../images/right.png"></image>
+      <text class="xym-right">{{item.days}}天</text>
+    </view>
+  </view>
+</view>
