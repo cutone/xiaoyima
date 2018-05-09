@@ -1,16 +1,16 @@
 <view class="container">
   <picker class="xym-date-picker" mode="date" bindchange="bindStartChange" end="{{nowDate}}" value="{{start}}">
-    <view class="picker xym-period-btn">
-      开始时间{{start}}
+    <view class="picker xym-period-btn xym-padding-left-20">
+      开始时间 {{start}}
     </view>
   </picker>
   <picker class="xym-date-picker" mode="date" bindchange="bindEndChange" end="{{nowDate}}" value="{{end}}">
-    <view class="picker xym-period-btn">
-      结束时间{{end}}
+    <view class="picker xym-period-btn xym-padding-left-20">
+      结束时间 {{end}}
     </view>
   </picker>
   <view class="xym-margin-top-100">
     <button bindtap="addHistory" class="xym-add-history-btn">保存</button>
-    <button wx:if="{{type=='edit'}}" bindtap="deleteHistory" class="xym-add-history-btn">删除</button>
+    <button wx:if="{{type=='edit'}}" bindtap="deleteHistory" class="xym-delete-history-btn">删除</button>
   </view>
 </view>

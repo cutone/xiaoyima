@@ -14,7 +14,7 @@
             <view wx:for="{{['日','一','二','三','四','五','六']}}" wx:for-item="day"  class="td" wx:key="item.id">{{day}}</view>
         </view>
         <view class="calendar_body">
-            <view class="td {{day.love?'love':''}} {{periodStart==day.ymd?'love':''}} {{day.monthly?'monthly':''}} {{day.danger?'danger':''}} {{day.safe? selected_action : ''}} {{day.safe? 'selected_day' : ''}}" wx:for="{{list}}"  wx:key="item.id" wx:for-key="id" wx:for-item="day" data-ymd="{{day.ymd}}" bindtap="selected_day">
+            <view class="td {{day.love?'love':''}} {{periodStart==day.ymd?'love':''}} {{day.monthly?'monthly':''}} {{day.danger?'danger':''}} {{day.safe? 'selected_day' : ''}}" wx:for="{{list}}"  wx:key="item.id" wx:for-key="id" wx:for-item="day" data-ymd="{{day.ymd}}">
                 <view wx:if="{{day.ymd == nowDate}}" class="day">今天</view>
                 <view wx:else class="day">{{day.date}}</view>
             </view>

@@ -38,7 +38,9 @@ App({
   },
   globalData: {
     userInfo: null,
-    url: 'http://localhost:3000',
+    url: 'https://xiaoyima.cutone123.com',
+    // url: 'http://localhost:3000',
+    // url: 'http://47.93.243.99:80',
     header: { 'Content-Type': 'application/json', 'cookie': "userId=" + wx.getStorageSync("userId") },
     userId: wx.getStorageSync("userId"),
   },

@@ -18,7 +18,6 @@ Page({
     if (userId){
       that.getUserInfo(userId)
     }else{
-      console.log(2);
       //获取用户状态
       wx.login({
         success: res => {

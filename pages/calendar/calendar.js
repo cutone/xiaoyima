@@ -134,15 +134,15 @@ Page({
         }
         list.splice(list.indexOf(item), 1, aaa);
 
-        var newItem = {
-          ymd: ymd,
-          date: j,
-          love: false,
-          danger: that.checkFutureDanger(ymd, month_later - 1),
-          monthly: that.checkFutureMonthly(ymd, month_later - 1),
-          safe: that.checkFutureSafe(ymd, month_later - 1)
-        } 
         if (month_later >= 1 && !aaa.monthly && !aaa.danger && !aaa.safe) {
+          var newItem = {
+            ymd: ymd,
+            date: j,
+            love: false,
+            danger: that.checkFutureDanger(ymd, month_later - 1),
+            monthly: that.checkFutureMonthly(ymd, month_later - 1),
+            safe: that.checkFutureSafe(ymd, month_later - 1)
+          } 
           list.splice(list.indexOf(aaa), 1, newItem)
           if (month_later > 1 && !newItem.monthly && !newItem.danger && !newItem.safe) {
             var bbb = {
@@ -263,8 +263,10 @@ Page({
         love = true;
       }
     })
-    if (that.compareDate(ymd, that.data.nowDate) && that.compareDate(that.data.periodStart, ymd)) {
-      love = true;
+    if (that.data.periodStart!==''){
+      if (that.compareDate(ymd, that.data.nowDate) && that.compareDate(that.data.periodStart, ymd)) {
+        love = true;
+      }
     }
     return love;
   },
@@ -287,7 +289,6 @@ Page({
     var first_safe_days_end = dateCount.dateAfter(that.data.periodEndLately, that.data.periodCycle * later  + firstDays);
     var second_safe_days_start = dateCount.dateAfter(that.data.periodEndLately, that.data.periodCycle * later + 1 + firstDays + 10);
     var second_safe_days_end = dateCount.dateAfter(that.data.periodEndLately, that.data.periodCycle * later + 1 + firstDays + 10 + 9);
-    console.log(first_safe_days_start,first_safe_days_end)
     safe = false;
     if (that.compareDate(ymd, first_safe_days_end) && that.compareDate(first_safe_days_start, ymd)) {
       safe = true;
@@ -302,6 +303,7 @@ Page({
     var firstDays = that.data.periodCycle > 28 ? that.data.periodCycle - 28 + 4 : 4;
     var danger_start_date = dateCount.dateAfter(that.data.periodEndLately, that.data.periodCycle * later + 1 + firstDays);
     var danger_end_date = dateCount.dateAfter(that.data.periodEndLately, that.data.periodCycle * later + 1 + firstDays + 9);
+    console.log('danger',danger_start_date, danger_end_date)
     danger = false;
     if (that.compareDate(ymd, danger_end_date) && that.compareDate(danger_start_date, ymd)) {
       danger = true;

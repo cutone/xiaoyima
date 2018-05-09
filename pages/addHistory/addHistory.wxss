@@ -27,3 +27,19 @@
   color: #fff;
   background-color: #ffa4c4;
 }
+.xym-delete-history-btn{
+  width:80%;
+  display:block;
+  height:40px;
+  margin:20px auto;
+  font-size:16px;
+  line-height:40px;
+  padding:0 10px;
+  border-radius:40px;
+  color: #ffa4c4;
+  background-color: #fff;
+  border: 1px solid #ffa4c4;
+}
+.xym-padding-left-20{
+  padding-left: 20px;
+}

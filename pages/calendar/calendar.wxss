@@ -10,7 +10,7 @@
 }
 .xym-alert-wrap{
   display: inline-block;
-  margin: 0 4%;
+  margin: 5px 4%;
 }
 .xym-background-pink{
   background-color: #ffa4c4;
