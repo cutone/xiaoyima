@@ -1,11 +1,10 @@
+@import "../../common/common.wxss";
 /**index.wxss**/
 .container {
   height: 100%;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 100rpx 0;
   box-sizing: border-box;
 } 
 .userinfo {
@@ -32,15 +31,10 @@
   background-color:#ff8eb6;
   text-align:center;
   color:#fff;
-  width:60%;
-  height:40px;
-  line-height:40px;
   border-radius:40px;
   margin:0 auto;
 }
 .xym-alert-text{
-  ine-height:70px;
-  height:70px;
   margin:0 atuo;
   display:block;
   text-align:center;
@@ -52,8 +46,80 @@
   vertical-align:middle;
   font-weight:bolder;
 }
-image{
-  width: 300px;
-  height: 167px;
-  margin: 20px auto;
+.status-change-picker{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  width: 45%;
+  height: 35px;
+  line-height: 35px;
+  margin: 10px 5px;
+}
+
+
+page{
+  background-color: #F8F8F8;
+}
+.xym-user-img{
+  width:128rpx;
+  height:128rpx;
+  margin:20rpx;
+  border-radius:50%;
+}
+.xym-user-wrap{
+  padding: 10rpx;
+}
+.xym-user-name{
+  font-size:16px;
+  height:30px;
+  line-height:30px;
+}
+.xym-user-periodCycle{
+  font-size:14px;
+  height:30px;
+  line-height:30px;
+}
+.xym-setting-btn{
+  float:right;
+  height:30px;
+  width:65px;
+  line-height:30px;
+  font-size:12px;
+  padding:0;
+  margin:20px 10px 0 0;
+  color:#ffa4c4;
+  border:1px solid #ffa4c4;
+  background-color:#fff;
+  text-align: center;
+  border-radius: 30px;
+}
+.xym-history-wrap{
+  background:#fff;
+  padding: 0 15px;
+  font-size:14px;
+}
+.xym-history-item{
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #f8f8f8;
+}
+.xym-right-icon{
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  margin-top: 13px;
+}
+.xym-add-record{
+  display: inline-block;
+  vertical-align: middle;
+  height:35px;
+  width:45%;
+  line-height:35px;
+  font-size:12px;
+  padding:0;
+  margin: 10px 5px;
+  color:#ffa4c4;
+  border:1px solid #ffa4c4;
+  background-color:#fff;
+  border-radius: 40px;
 }

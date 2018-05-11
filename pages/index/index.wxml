@@ -1,24 +1,38 @@
 <!--index.wxml-->
 <view class="container">
-  <view wx:if="{{status == 0}}">
-    <text class="xym-alert-text">预计下次开始日期</text>
-    <view class="xym-alert-text" wx:if="{{status == 0}}">还剩<text class="xym-days">{{last_days}}</text>天</view>
-    <image src="../../images/123.jpeg"></image>
-    <picker mode="date" bindchange="bindComingDateChange" end="{{nowDate}}">
-      <view class="picker xym-period-btn">
-        大姨妈来了
+  <view class="xym-user-wrap xym-background-fff">
+    <image class="xym-user-img xym-inline-block" src="{{userInfo.avatarUrl}}"></image>
+    <view class="xym-inline-block">
+      <text class="xym-block xym-user-name">{{userInfo.nickName}}</text>
+      <text class="xym-block xym-user-periodCycle">平均生理周期：{{periodCycle}}天</text>
+      <text wx:if="{{status == 0}}" class="xym-block xym-user-periodCycle">预计下次开始日期还剩：<text class="xym-theme-color xym-font-size-18">{{last_days}}天</text></text>
+      <text wx:if="{{status == 1}}" class="xym-block xym-user-periodCycle">姨妈来了第：<text class="xym-theme-color xym-font-size-18">{{start_days}}天</text></text>
+    </view>
+    <picker class="xym-inline-block xym-right" bindchange="bindPeriodCycleChange" range="{{periodCycleList}}" value="{{periodCycle-1}}">
+      <view class="picker">
+        <view class="xym-setting-btn">设置周期</view>
       </view>
     </picker>
   </view>
-  
-  <view wx:if="{{status == 1}}">
-    <text class="xym-alert-text">大姨妈来了</text>
-    <view class="xym-alert-text">第<text class="xym-days">{{start_days}}</text>天</view>
-    <image src="../../images/123.jpeg"></image>
-    <picker mode="date" bindchange="bindLeavingingDateChange" end="{{nowDate}}">
+
+  <view class="xym-text-align-center">
+    <picker wx:if="{{status == 0}}" mode="date" class="status-change-picker" bindchange="bindComingDateChange" end="{{nowDate}}">
       <view class="picker xym-period-btn">
-        大姨妈走了
+        姨妈来了
       </view>
     </picker>
+    <picker wx:if="{{status == 1}}" mode="date" class="status-change-picker" bindchange="bindLeavingingDateChange" end="{{nowDate}}">
+      <view class="picker xym-period-btn">
+        姨妈走了
+      </view>
+    </picker>
+    <button class="xym-add-record" bindtap="toAddHisttory">增加历史记录</button>
+  </view>
+  <view class="xym-history-wrap">
+    <view class="xym-history-item" wx:for="{{history}}" wx:for-item="item" data-id="{{item._id}}" bindtap="toAddHisttory">
+      <text>{{item.start}}至{{item.end}}</text>
+      <image class="xym-right-icon xym-right" src="../../images/right.png"></image>
+      <text class="xym-right">{{item.days}}天</text>
+    </view>
   </view>
 </view> 

@@ -303,7 +303,6 @@ Page({
     var firstDays = that.data.periodCycle > 28 ? that.data.periodCycle - 28 + 4 : 4;
     var danger_start_date = dateCount.dateAfter(that.data.periodEndLately, that.data.periodCycle * later + 1 + firstDays);
     var danger_end_date = dateCount.dateAfter(that.data.periodEndLately, that.data.periodCycle * later + 1 + firstDays + 9);
-    console.log('danger',danger_start_date, danger_end_date)
     danger = false;
     if (that.compareDate(ymd, danger_end_date) && that.compareDate(danger_start_date, ymd)) {
       danger = true;

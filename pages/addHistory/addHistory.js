@@ -42,6 +42,14 @@ Page({
       })
       return;
     }
+    if (that.data.start > that.data.end) {
+      wx.showToast({
+        title: '结束时间不得在开始时间之前',
+        icon: 'none',
+        duration: 2000
+      })
+      return;
+    }
     if(that.data.type == 'edit'){
       var url = '/user/updateHistory';
       console.log(that.data.end);

@@ -11,3 +11,12 @@
 .xym-right{
   float: right;
 }
+.xym-text-align-center{
+  text-align: center;
+}
+.xym-theme-color{
+  color: #ffa4c4;
+}
+.xym-font-size-18{
+  font-size: 18px;
+}
